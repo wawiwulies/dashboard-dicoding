@@ -8,7 +8,7 @@ sns.set(style='whitegrid')
 st.title('E-Commerce Dashboard')
 
 # Showing Logo
-st.image('/logo.png', width=150) 
+st.image('logo.png', width=150) 
 
 # Load the datasets
 df = pd.read_csv('main_data.csv')
