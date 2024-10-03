@@ -42,7 +42,7 @@ if option == 'Customer Transactions':
     st.header('Customer Transactions Over Time')
     
     # Convert order_purchase_timestamp to datetime
-   df['order_delivered_customer_date'] = pd.to_datetime(df['order_delivered_customer_date'])
+    df['order_delivered_customer_date'] = pd.to_datetime(df['order_delivered_customer_date'])
 
     # Create the figure
     fig, ax = plt.subplots(figsize=(10, 6))
