@@ -38,18 +38,32 @@ if option == 'Product Categories':
     st.pyplot(fig)
 
 # Customer Transactions Analysis
+# Customer Transactions Analysis
 if option == 'Customer Transactions':
     st.header('Customer Transactions Over Time')
     
     # Convert order_purchase_timestamp to datetime
+    #df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
+
+
+    # Plot distribution of customer transactions over time
+    #fig, ax = plt.subplots(figsize=(10, 6))
+    #sns.histplot(df['order_purchase_timestamp'], bins=50, kde=True, ax=ax)
+    #ax.set_title('Distribution of Customer Transactions Over Time')
+    #ax.set_xlabel('Transaction Date')
+    #ax.set_ylabel('Frequency')
+    
+    #st.pyplot(fig)
+    
     df['order_delivered_customer_date'] = pd.to_datetime(df['order_delivered_customer_date'])
+
 
     # Create the figure
     fig, ax = plt.subplots(figsize=(10, 6))
 
     # Plot the histogram
     sns.histplot(df['order_delivered_customer_date'], bins=50, kde=True, ax=ax)
-    ax.set_title('Distribusi Waktu Pengiriman Pesanan')
+    ax.set_title('Distribution of Customer Transactions Over Time')
     ax.set_xlabel('Tanggal Pengiriman')
     ax.set_ylabel('Frekuensi')
 
