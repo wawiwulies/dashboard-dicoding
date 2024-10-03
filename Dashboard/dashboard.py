@@ -44,21 +44,6 @@ if option == 'Customer Transactions':
     # Convert order_purchase_timestamp to datetime
     df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
 
-
-    # Plot distribution of customer transactions over time
-    fig, ax = plt.subplots(figsize=(10, 6))
-    sns.histplot(df['order_purchase_timestamp'], bins=50, kde=True, ax=ax)
-    ax.set_title('Distribution of Customer Transactions Over Time')
-    ax.set_xlabel('Transaction Date')
-    ax.set_ylabel('Frequency')
-    
-    st.pyplot(fig)
-    
-    df['order_delivered_customer_date'] = pd.to_datetime(df['order_delivered_customer_date'])
-
-    # Streamlit title
-    st.title('Distribusi Waktu Pengiriman Pesanan')
-
     # Create the figure
     fig, ax = plt.subplots(figsize=(10, 6))
 
